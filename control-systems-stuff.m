@@ -38,6 +38,9 @@ g_c = feedback(g_o, g_f)
 # root locus
 rlocus(g_c)
 
+# interactive root locus plot
+rlocusx(g_c) # allows you to click on a point and get the gain and other useful information
+
 # nyquist plot
 nyquist(g_c)
 
@@ -45,4 +48,11 @@ nyquist(g_c)
 t0 = 0;
 t_end = 10;
 n = 250;
-t = linspace(t0,t_end,n);
+t = linspace(t0,t_end,n);'
+
+# or
+t = 0:250:10;
+
+# matrix utilities
+# m*m idenity matrix
+I = eye(m);
